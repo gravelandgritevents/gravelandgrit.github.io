@@ -6,70 +6,75 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
     :root {
-      --brand-green: #506B38;
+      --earthy-green: #506B38;
       --burnt-orange: #D95E1F;
       --stone: #F5F5F0;
+      --slate-grey: #3E3E3E;
     }
 
     body {
+      background-color: var(--earthy-green);
+      color: var(--burnt-orange);
       font-family: 'Helvetica Neue', sans-serif;
       margin: 0;
       padding: 0;
-      background-color: var(--brand-green);
-      color: var(--burnt-orange);
       line-height: 1.6;
     }
 
     header {
-      background-color: var(--brand-green);
+      background-color: var(--earthy-green);
       text-align: center;
       padding: 2rem 1rem;
+    }
+
+    header img {
+      max-width: 160px;
+      margin-bottom: 1rem;
     }
 
     header h1 {
       margin: 0;
       font-size: 2.2rem;
-      color: var(--burnt-orange);
-    }
-
-    .logo {
-      max-width: 160px;
-      margin-bottom: 1rem;
+      color: var(--stone);
     }
 
     section {
       padding: 2rem 1rem;
       max-width: 800px;
       margin: auto;
-      background-color: var(--brand-green);
     }
 
     h2 {
-      background-color: var(--brand-green);
+      background-color: var(--earthy-green);
       color: var(--stone);
       text-align: center;
       margin-bottom: 1rem;
       padding: 1rem 0;
-      font-family: sans-serif;
+      font-size: 1.8rem;
       border-radius: 8px 8px 0 0;
     }
 
     iframe {
       width: 100%;
-      border: 1px solid var(--burnt-orange);
-      border-radius: 0 0 8px 8px;
       height: 900px;
+      border: 2px solid var(--burnt-orange);
+      border-radius: 0 0 8px 8px;
     }
 
     footer {
       text-align: center;
       font-size: 0.85rem;
-      color: var(--burnt-orange);
+      color: var(--stone);
       margin-top: 3rem;
       padding-bottom: 2rem;
     }
 
     a {
+      color: var(--burnt-orange);
+      text-decoration: underline;
+    }
+
+    ::placeholder {
       color: var(--burnt-orange);
     }
   </style>
@@ -77,7 +82,7 @@
 <body>
 
   <header>
-    <img src="logo.jpeg" alt="Gravel & Grit Logo" class="logo" />
+    <img src="logo.jpeg" alt="Gravel & Grit Logo" />
     <h1>Bristol Backyard Ultra — Coming August 2026</h1>
   </header>
 
