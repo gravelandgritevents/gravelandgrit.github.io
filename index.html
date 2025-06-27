@@ -1,90 +1,101 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Gravel & Grit | Bristol Backyard Ultra 2026</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            font-family: 'Helvetica Neue', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f2f2f2;
-            color: #333;
-            line-height: 1.6;
-        }
-        header {
-            background-color: #1a1a1a;
-            color: #fff;
-            padding: 2rem 1rem;
-            text-align: center;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2.2rem;
-        }
-        .logo {
-            max-width: 160px;
-            margin-bottom: 1rem;
-        }
-        section {
-            padding: 2rem 1rem;
-            max-width: 800px;
-            margin: auto;
-            background-color: #fff;
-        }
-        iframe {
-            width: 100%;
-            border: none;
-            height: 1200px;
-        }
-        footer {
-            text-align: center;
-            font-size: 0.85rem;
-            color: #777;
-            margin-top: 3rem;
-            padding-bottom: 2rem;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <title>Gravel & Grit | Bristol Backyard Ultra 2026</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    :root {
+      --brand-green: #506B38;
+      --burnt-orange: #D95E1F;
+      --stone: #F5F5F0;
+    }
+
+    body {
+      font-family: 'Helvetica Neue', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: var(--brand-green);
+      color: var(--burnt-orange);
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: var(--brand-green);
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.2rem;
+      color: var(--burnt-orange);
+    }
+
+    .logo {
+      max-width: 160px;
+      margin-bottom: 1rem;
+    }
+
+    section {
+      padding: 2rem 1rem;
+      max-width: 800px;
+      margin: auto;
+      background-color: var(--brand-green);
+    }
+
+    h2 {
+      background-color: var(--brand-green);
+      color: var(--stone);
+      text-align: center;
+      margin-bottom: 1rem;
+      padding: 1rem 0;
+      font-family: sans-serif;
+      border-radius: 8px 8px 0 0;
+    }
+
+    iframe {
+      width: 100%;
+      border: 1px solid var(--burnt-orange);
+      border-radius: 0 0 8px 8px;
+      height: 900px;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--burnt-orange);
+      margin-top: 3rem;
+      padding-bottom: 2rem;
+    }
+
+    a {
+      color: var(--burnt-orange);
+    }
+  </style>
 </head>
 <body>
 
-<header>
-    <img src="logo.jpeg" alt="Gravel & Grit Logo" class="logo">
+  <header>
+    <img src="logo.jpeg" alt="Gravel & Grit Logo" class="logo" />
     <h1>Bristol Backyard Ultra — Coming August 2026</h1>
-</header>
+  </header>
 
-<section style="padding: 2rem; max-width: 700px; margin: 0 auto;">
-  <<h2
-  style="
-    background-color: #506B38;
-    color: #F5F5F0;
-    text-align: center;
-    margin-bottom: 1rem;
-    padding: 1rem 0;
-    font-family: sans-serif;
-    border-radius: 8px 8px 0 0;
-  "
->
-  Sign Up for Updates
-</h2>
-  <iframe
-    src="https://docs.google.com/forms/d/e/1FAIpQLScvKunxq_YRypTZTXjoQm9gdU8J1nUm2AraT2GtGs1xQju9sg/viewform?embedded=true"
-    width="100%"
-    height="900"
-    frameborder="0"
-    marginheight="0"
-    marginwidth="0"
-    style="border: 1px solid #506B38; border-radius: 0 0 8px 8px;"
-  >
-    Loading…
-  </iframe>
-</section>
-    
-<footer>
-    &copy; 2025 Gravel & Grit | Contact: info@gritandgravelevents.com
-</footer>
+  <section>
+    <h2>Sign Up for Updates</h2>
+    <iframe
+      src="https://docs.google.com/forms/d/e/1FAIpQLScvKunxq_YRypTZTXjoQm9gdU8J1nUm2AraT2GtGs1xQju9sg/viewform?embedded=true"
+      frameborder="0"
+      marginheight="0"
+      marginwidth="0"
+    >
+      Loading…
+    </iframe>
+  </section>
+
+  <footer>
+    &copy; 2025 Gravel & Grit | Contact: <a href="mailto:info@gritandgravelevents.com">info@gritandgravelevents.com</a>
+  </footer>
 
 </body>
 </html>
