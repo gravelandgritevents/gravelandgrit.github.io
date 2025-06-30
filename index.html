@@ -13,11 +13,11 @@
     }
 
     body {
-      background-color: var(--earthy-green);
-      color: var(--burnt-orange);
-      font-family: 'Helvetica Neue', sans-serif;
       margin: 0;
       padding: 0;
+      font-family: 'Helvetica Neue', sans-serif;
+      background-color: var(--stone);
+      color: var(--slate-grey);
       line-height: 1.6;
     }
 
@@ -38,39 +38,57 @@
       color: var(--burnt-orange);
     }
 
+    nav {
+      background-color: var(--earthy-green);
+      text-align: center;
+      padding: 1rem 0;
+    }
+
+    nav a {
+      color: var(--stone);
+      margin: 0 1rem;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      color: var(--burnt-orange);
+    }
+
     section {
+      background-color: var(--stone);
+      color: var(--slate-grey);
       padding: 2rem 1rem;
       max-width: 800px;
-      margin: auto;
+      margin: 2rem auto;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     }
 
     h2 {
-      background-color: var(--earthy-green);
-      color: var(--burnt-orange);
+      color: var(--earthy-green);
+      font-weight: bold;
       text-align: center;
       margin-bottom: 1rem;
-      padding: 1rem 0;
-      font-size: 1.8rem;
-      border-radius: 8px 8px 0 0;
     }
 
     iframe {
       width: 100%;
       height: 900px;
       border: 2px solid var(--burnt-orange);
-      border-radius: 0 0 8px 8px;
+      border-radius: 8px;
     }
 
     footer {
       text-align: center;
       font-size: 0.85rem;
-      color: var(--stone);
+      color: var(--slate-grey);
       margin-top: 3rem;
       padding-bottom: 2rem;
     }
 
     footer a {
-      color: var(--stone);
+      color: var(--slate-grey);
       text-decoration: underline;
     }
 
@@ -81,6 +99,21 @@
     ::placeholder {
       color: var(--burnt-orange);
     }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.5rem;
+      }
+
+      nav a {
+        display: block;
+        margin: 0.5rem 0;
+      }
+
+      iframe {
+        height: 600px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -90,20 +123,35 @@
     <h1>Bristol Backyard Ultra — Coming August 2026</h1>
   </header>
 
-  <section>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#signup">Sign Up</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
+    <h2>What is a Backyard Ultra?</h2>
+    <p>The Bristol Backyard Ultra is a unique endurance event where runners complete a 4.167-mile loop every hour, on the hour — until only one runner remains. It’s not about speed — it’s about outlasting the competition. Hosted on private trails just outside Bristol, this event is about strategy, grit, and mental strength.</p>
+  </section>
+
+  <section id="signup">
     <h2>Sign Up for Updates</h2>
     <iframe
       src="https://docs.google.com/forms/d/e/1FAIpQLScvKunxq_YRypTZTXjoQm9gdU8J1nUm2AraT2GtGs1xQju9sg/viewform?embedded=true"
       frameborder="0"
       marginheight="0"
       marginwidth="0"
-    >
-      Loading…
-    </iframe>
+    >Loading…</iframe>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Have questions or want to get involved? Reach out to us any time.</p>
+    <p>Email: <a href="mailto:info@gravelandgritevents.com">info@gravelandgritevents.com</a></p>
   </section>
 
   <footer>
-    &copy; 2025 Gravel & Grit | Contact: <a href="mailto:info@gritandgravelevents.com">info@gritandgravelevents.com</a>
+    &copy; 2025 Gravel & Grit Events | Built with heart and trail dust.
   </footer>
 
 </body>
