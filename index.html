@@ -4,6 +4,14 @@
   <meta charset="UTF-8" />
   <title>Gravel & Grit | Bristol Backyard Ultra 2026</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Redirect to www version if accessed without it -->
+  <script>
+    if (location.hostname === "gravelandgritevents.com") {
+      location.href = "https://www.gravelandgritevents.com" + location.pathname + location.search + location.hash;
+    }
+  </script>
+
   <style>
     :root {
       --earthy-green: #09493C;
@@ -84,7 +92,6 @@
       cursor: pointer;
     }
 
-    /* Underline animation on hover for h2 */
     h2::after {
       content: "";
       position: absolute;
