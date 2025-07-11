@@ -5,7 +5,15 @@
   <title>Gravel & Grit | Bristol Backyard Ultra 2026</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Redirect to www version if accessed without it -->
+  <!-- Social preview -->
+  <meta property="og:title" content="Gravel & Grit | Bristol Backyard Ultra 2026" />
+  <meta property="og:image" content="logo.jpeg" />
+  <meta property="og:description" content="Join us for the ultimate test of endurance. One loop. Every hour. Until one remains." />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png" />
+
+  <!-- Redirect to www if needed -->
   <script>
     if (location.hostname === "gravelandgritevents.com") {
       location.href = "https://www.gravelandgritevents.com" + location.pathname + location.search + location.hash;
@@ -26,34 +34,47 @@
 
     body {
       margin: 0;
-      padding: 0;
       font-family: 'Helvetica Neue', sans-serif;
       background-color: var(--stone);
       color: var(--slate-grey);
-      line-height: 1.6;
     }
 
-    header {
-      background-color: var(--earthy-green);
+    header.hero {
+      background: url('trail-hero.jpg') center/cover no-repeat;
       text-align: center;
-      padding: 2rem 1rem;
+      padding: 5rem 1rem 3rem;
+      color: white;
     }
 
-    header img {
-      max-width: 160px;
+    header.hero h1 {
+      font-size: 2.8rem;
       margin-bottom: 1rem;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
     }
 
-    header h1 {
-      margin: 0;
-      font-size: 2.2rem;
-      color: var(--burnt-orange);
+    .cta-button {
+      background-color: var(--burnt-orange);
+      color: white;
+      padding: 0.75rem 1.5rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 6px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .cta-button:hover {
+      background-color: #b5662f;
     }
 
     nav {
+      position: sticky;
+      top: 0;
       background-color: var(--earthy-green);
       text-align: center;
-      padding: 1rem 0;
+      padding: 1rem;
+      z-index: 1000;
     }
 
     nav a {
@@ -61,52 +82,41 @@
       margin: 0 1rem;
       font-weight: bold;
       text-decoration: none;
-      padding: 0.3rem 0.6rem;
-      border-radius: 4px;
-      transition: background-color 0.3s ease, color 0.3s ease;
     }
 
-    nav a:hover,
-    nav a:focus {
+    nav a:hover {
       color: var(--burnt-orange);
-      background-color: rgba(209, 124, 58, 0.15);
-      outline: none;
     }
 
     section {
       background-color: var(--stone);
-      color: var(--slate-grey);
-      padding: 2rem 1rem;
+      padding: 3rem 1rem;
       max-width: 800px;
-      margin: 2rem auto;
-      border-radius: 8px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      margin: auto;
     }
 
     h2 {
       color: var(--earthy-green);
-      font-weight: bold;
       text-align: center;
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
       position: relative;
-      cursor: pointer;
     }
 
     h2::after {
       content: "";
       position: absolute;
-      width: 0%;
+      width: 60%;
       height: 3px;
-      bottom: -6px;
-      left: 50%;
-      background-color: var(--burnt-orange);
-      transition: width 0.3s ease, left 0.3s ease;
-      border-radius: 2px;
+      background: var(--burnt-orange);
+      bottom: -10px;
+      left: 20%;
     }
 
-    h2:hover::after {
-      width: 60%;
-      left: 20%;
+    .countdown {
+      font-size: 1.5rem;
+      text-align: center;
+      margin-top: 2rem;
+      color: var(--slate-grey);
     }
 
     iframe {
@@ -118,46 +128,19 @@
 
     footer {
       text-align: center;
+      padding: 2rem 1rem;
       font-size: 0.85rem;
       color: var(--slate-grey);
-      margin-top: 3rem;
-      padding-bottom: 2rem;
-    }
-
-    footer a {
-      color: var(--slate-grey);
-      text-decoration: underline;
-    }
-
-    a:hover {
-      color: var(--burnt-orange);
-    }
-
-    ::placeholder {
-      color: var(--burnt-orange);
-    }
-
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 1.5rem;
-      }
-
-      nav a {
-        display: block;
-        margin: 0.5rem 0;
-      }
-
-      iframe {
-        height: 600px;
-      }
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <img src="logo.jpeg" alt="Gravel & Grit Logo" />
-    <h1>Bristol Backyard Ultra — Coming August 2026</h1>
+  <header class="hero">
+    <h1>Bristol Backyard Ultra 2026</h1>
+    <p>The ultimate test of endurance. One loop. Every hour. Until one remains.</p>
+    <a href="#signup"><button class="cta-button">Sign Up for Updates</button></a>
+    <div class="countdown" id="countdown"></div>
   </header>
 
   <nav>
@@ -188,8 +171,31 @@
   </section>
 
   <footer>
-    &copy; 2025 Gravel & Grit Events | Built with heart and grit. Lots of grit. 
+    &copy; 2025 Gravel & Grit Events | Built with heart and grit. Lots of grit.
   </footer>
+
+  <script>
+    // Countdown timer to event date (August 29, 2026)
+    const eventDate = new Date("2026-08-29T08:00:00").getTime();
+    const countdownEl = document.getElementById("countdown");
+
+    const updateCountdown = () => {
+      const now = new Date().getTime();
+      const distance = eventDate - now;
+
+      if (distance < 0) {
+        countdownEl.innerHTML = "The race has begun!";
+        return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      countdownEl.innerHTML = `Countdown: ${days} days ${hours} hours to go!`;
+    };
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000 * 60 * 60); // update hourly
+  </script>
 
 </body>
 </html>
