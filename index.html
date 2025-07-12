@@ -2,172 +2,196 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <title>Gravel & Grit | Bristol Backyard Ultra 2026</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gravel & Grit | Backyard Ultra</title>
-  
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-
-  <!-- Mailchimp -->
-  <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/xxxxxxxxxxxx/xxxxxxxxxxxx.js");</script>
+  <link href="https://fonts.googleapis.com/css2?family=Helvetica+Neue:wght@400;700&display=swap" rel="stylesheet">
+  <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
 
   <style>
+    :root {
+      --earthy-green: #09493C;
+      --burnt-orange: #D17C3A;
+      --stone: #F5F5F0;
+      --slate-grey: #3E3E3E;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
-      font-family: 'Inter', sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f8f9f4;
-      color: #042b25;
+      font-family: 'Helvetica Neue', sans-serif;
+      background-color: var(--stone);
+      color: var(--slate-grey);
       line-height: 1.6;
     }
 
-    header, section, footer {
-      padding: 2rem 1rem;
-      max-width: 800px;
-      margin: 0 auto;
-    }
-
-    h1, h2 {
-      color: #043b32;
-      margin-bottom: 0.5rem;
-    }
-
-    p {
-      margin-bottom: 1rem;
-    }
-
-    .hero {
-      background: linear-gradient(to right, #004d40, #00695c);
-      color: white;
+    header {
+      background-color: var(--earthy-green);
       text-align: center;
-      padding: 4rem 1rem;
-      border-radius: 0.5rem;
-      margin-bottom: 2rem;
+      padding: 2rem 1rem;
     }
 
-    .hero h1 {
-      font-size: 2.5rem;
+    header img {
+      max-width: 160px;
       margin-bottom: 1rem;
     }
 
-    .hero p {
-      font-size: 1.2rem;
+    header h1 {
+      margin: 0;
+      font-size: 2.2rem;
+      color: var(--burnt-orange);
+    }
+
+    nav {
+      background-color: var(--earthy-green);
+      text-align: center;
+      padding: 1rem 0;
+    }
+
+    nav a {
+      color: var(--stone);
+      margin: 0 1rem;
+      font-weight: bold;
+      text-decoration: none;
+      padding: 0.3rem 0.6rem;
+      border-radius: 4px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    nav a:hover,
+    nav a:focus {
+      color: var(--burnt-orange);
+      background-color: rgba(209, 124, 58, 0.15);
+      outline: none;
     }
 
     section {
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-      margin-bottom: 2rem;
-    }
-
-    ul {
-      padding-left: 1.2rem;
-    }
-
-    li {
-      margin-bottom: 0.75rem;
-    }
-
-    #mc_embed_signup {
-      text-align: center;
-    }
-
-    #mc_embed_signup input.email {
-      padding: 0.5rem;
-      width: 60%;
-      max-width: 300px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-    }
-
-    #mc-embedded-subscribe {
-      background-color: #004d40;
-      color: white;
-      padding: 0.7rem 1.5rem;
-      border: none;
+      background-color: var(--stone);
+      color: var(--slate-grey);
+      padding: 2rem 1rem;
+      max-width: 800px;
+      margin: 2rem auto;
       border-radius: 8px;
-      font-weight: bold;
-      font-size: 1rem;
-      cursor: pointer;
-      margin-top: 1rem;
-      transition: background 0.3s ease;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     }
 
-    #mc-embedded-subscribe:hover {
-      background-color: #00695c;
+    h2 {
+      color: var(--earthy-green);
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .mailchimp-form input[type=email] {
+      color: var(--slate-grey) !important;
     }
 
     footer {
       text-align: center;
-      padding: 2rem;
-      color: #666;
-      font-size: 0.9rem;
+      font-size: 0.85rem;
+      color: var(--slate-grey);
+      margin-top: 3rem;
+      padding-bottom: 2rem;
+    }
+
+    footer a {
+      color: var(--slate-grey);
+      text-decoration: underline;
+    }
+
+    a:hover {
+      color: var(--burnt-orange);
     }
 
     @media (max-width: 600px) {
-      .hero h1 {
-        font-size: 1.8rem;
+      header h1 {
+        font-size: 1.5rem;
+      }
+      nav a {
+        display: block;
+        margin: 0.5rem 0;
       }
     }
   </style>
 </head>
+
 <body>
+  <header>
+    <img src="logo.jpeg" alt="Gravel & Grit Logo" />
+    <h1>Bristol Backyard Ultra — Coming September 2026</h1>
+  </header>
 
-  <section class="hero">
-    <h1>Backyard Ultra, Bristol</h1>
-    <p>One loop. Every hour. Last one standing wins. Are you in?</p>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#course">Course</a>
+    <a href="#signup">Sign Up</a>
+    <a href="#community">What You'll Get</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
+    <h2>What is a Backyard Ultra?</h2>
+    <p>The Bristol Backyard Ultra is a last-runner-standing endurance race. You’ll run a 4.167-mile loop every hour, on the hour. Fall behind the clock, and you’re out. Keep going, and going, and going — until you’re the only one left.</p>
+    <p>Whether you're chasing victory or seeing how far your mind and body can take you, this race will test your limits in the most exhilarating way possible.</p>
   </section>
 
-  <section>
-    <h2>About the Race</h2>
-    <p>
-      Gravel & Grit's Backyard Ultra follows the official rules: a 4.167-mile trail loop, starting on the hour every hour. If you're not at the start line when the bell rings, you're out. Last one standing wins.
-    </p>
-    <p>
-      Expect camaraderie, resilience, and one epic journey of grit — whether you're aiming for 4 yards or 40.
-    </p>
-  </section>
-
-  <section>
+  <section id="course">
     <h2>The Course</h2>
-    <p>
-      📍 <strong>Venue TBC</strong> — but you can expect:
-    </p>
-    <ul>
-      <li>🌳 Mixed terrain: woodland, gravel tracks, open fields</li>
-      <li>⛰️ Some gentle climbs — nothing too wild, but it’s no park loop</li>
-      <li>🚩 Well-marked route and all the classic Backyard rules</li>
-    </ul>
-    <p>Be first to hear when the location is revealed — sign up below 👇</p>
+    <p><strong>Venue TBC</strong> — we’re finalising an awesome location near Bristol. Sign up below to be the first to hear.</p>
+    <p>Expect a mix of woodland trails, grass paths, and runnable undulations — nothing too steep, but not pancake flat either. Designed to be scenic, varied, and loop-accurate to the official 4.167 miles.</p>
   </section>
 
-  <section>
+  <section id="signup">
+    <h2>Sign Up for Updates</h2>
+    <div id="mc_embed_signup">
+      <form action="https://gravelandgritevents.us13.list-manage.com/subscribe/post?u=45362f8425ca47e31537b996b&amp;id=1cf3900049&amp;f_id=002437e5f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate mailchimp-form" target="_blank" novalidate>
+        <div id="mc_embed_signup_scroll">
+          <label for="mce-EMAIL">Email Address <span class="asterisk">*</span></label>
+          <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required>
+          <div style="position: absolute; left: -5000px;" aria-hidden="true">
+            <input type="text" name="b_45362f8425ca47e31537b996b_1cf3900049" tabindex="-1" value="">
+          </div>
+          <div class="clear">
+            <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <section id="community">
     <h2>What You’ll Get</h2>
     <ul>
-      <li>✅ <strong>A professionally organised race</strong> — precise loop distance, clear markings, and on-the-hour starts.</li>
-      <li>✅ <strong>Timing and results</strong> — live updates and full post-race breakdown of every Yard completed.</li>
-      <li>✅ <strong>Simple, solid aid</strong> — water, snacks, and warm food for the long-haulers.</li>
-      <li>✅ <strong>A community of legends</strong> — whether you’re a first-timer or an ultra veteran, you’ll feel welcome here.</li>
-      <li>✅ <strong>Start/finish rest zone</strong> — set up camp and reset between Yards.</li>
-      <li>🏅 <strong>Last one standing?</strong> — there can only be one winner, and we’ll honour that achievement in style.</li>
+      <li><strong>✅ A professionally organised race</strong> — precise loop distance, clear markings, and on-the-hour starts.</li>
+      <li><strong>✅ Timing and results</strong> — live updates and full post-race breakdown of every Yard completed.</li>
+      <li><strong>✅ Simple, solid aid</strong> — water, snacks, and warm food for the long-haulers.</li>
+      <li><strong>✅ A community of legends</strong> — whether you’re a first-timer or an ultra veteran, you’ll feel welcome here.</li>
+      <li><strong>✅ Start/finish rest zone</strong> — set up camp and reset between Yards.</li>
+      <li><strong>🏅 Last one standing?</strong> — there can only be one winner, and we’ll honour that achievement in style.</li>
     </ul>
   </section>
 
-  <section id="mc_embed_signup">
-    <form action="https://yourusername.us21.list-manage.com/subscribe/post?u=xxx&amp;id=xxx" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-      <h2>Sign Up for Updates</h2>
-      <div>
-        <label for="mce-EMAIL">Email Address <span class="asterisk">*</span></label><br />
-        <input type="email" name="EMAIL" class="email" id="mce-EMAIL" required placeholder="you@example.com" />
-      </div>
-      <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" />
-    </form>
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Have questions or want to get involved? Drop us a message anytime.</p>
+    <p>Email: <a href="mailto:info@gravelandgritevents.com">info@gravelandgritevents.com</a></p>
   </section>
 
   <footer>
-    <p>&copy; 2025 Gravel & Grit Events | Made with grit in Bristol</p>
+    &copy; 2025 Gravel & Grit Events | Built with heart and grit. Lots of grit.
   </footer>
 
+  <!-- Mailchimp Validation Script -->
+  <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
+  <script type="text/javascript">
+    (function($) {
+      window.fnames = new Array(); window.ftypes = new Array();
+      fnames[0]='EMAIL';ftypes[0]='email';
+    }(jQuery));
+    var $mcj = jQuery.noConflict(true);
+  </script>
 </body>
 </html>
